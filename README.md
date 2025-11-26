@@ -60,7 +60,7 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - 주소 자동완성(Kakao API) 적용 → UX 개선  
 - Git Flow 정착 → **병합 충돌 약 50~60% 감소**
 
-🔗 https://github.com/Justin-SJ-Hong/oz_ex3_fe_shop  
+🔗 [https://github.com/oz-main-12-team2/oz-main-fe-12-team2](https://github.com/oz-main-12-team2/oz-main-fe-12-team2)  
 
 ---
 
@@ -69,16 +69,16 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - UI 중복 코드 **약 40% 감소**  
 - TanStack Query 기반 상태관리 → **데이터 반영 지연 문제 30% 개선**
 
-🔗 https://github.com/Justin-SJ-Hong/oz_ex3_fe4  
+🔗 [https://github.com/Justin-SJ-Hong/oz_ex3_fe4](https://github.com/OZ-Coding-School/oz_externship_fe_03_team4)  
 
 ---
 
-### 🧭 Mechurri – 식당 추천 서비스
+### 🧭 메추리 – 식당 추천 서비스
 - API 5개 연동  
 - 리뷰 조회 최적화 → **렌더링 속도 약 50% 개선**  
 - 상세 페이지 UI 개선 → 클릭 성공률 체감 20~30% 상승
 
-🔗 https://github.com/Justin-SJ-Hong/mechurri  
+🔗 [https://github.com/Justin-SJ-Hong/mechurri](https://github.com/vsuminv/mechuli)  
 
 ---
 
@@ -87,13 +87,15 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - 클라이언트 결제 승인 구조 설계 → 승인 시간 30% 단축  
 - 비후원자 게시글 작성 차단 → 커뮤니티 신뢰성 확보
 
-🔗 https://github.com/Justin-SJ-Hong/wadiz-clone  
+🔗 [https://github.com/Justin-SJ-Hong/wadiz-clone](https://github.com/TeamPLPL/frontend) (FE) 
+<br />
+🔗 [https://github.com/TeamPLPL/backend](https://github.com/TeamPLPL/backend) (BE)
 
 ---
 
 ## 🛠 Problem Solving Highlights (Troubleshooting)
 - 리뷰 데이터 렌더링 병목 → **서버 정렬 전환으로 50% 개선**  
-- UI 요소 중복 → **공통 컴포넌트화로 60% 감소**  
+- UI 요소 중복 → **공통 컴포넌트화로 40% 감소**  
 - 비동기 타이밍 문제 → 상태 업데이트 재설계  
 - Axios 구조 분산 → **API Wrapper 적용**  
 - Git Flow 정착 → 충돌 50~60% 감소
