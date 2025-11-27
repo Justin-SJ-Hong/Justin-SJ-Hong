@@ -70,7 +70,7 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - UI 중복 코드 **약 40% 감소**  
 - TanStack Query 기반 상태관리 → **데이터 반영 지연 문제 30% 개선**
 
-🔗 [https://github.com/Justin-SJ-Hong/oz_ex3_fe4](https://github.com/OZ-Coding-School/oz_externship_fe_03_team4)  
+🔗 [https://github.com/Justin-SJ-Hong/oz_externship_fe_03_team4](https://github.com/OZ-Coding-School/oz_externship_fe_03_team4)  
 
 ---
 
@@ -79,7 +79,7 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - 리뷰 조회 최적화 → **렌더링 속도 약 50% 개선**  
 - 상세 페이지 UI 개선 → 클릭 성공률 체감 20~30% 상승
 
-🔗 [https://github.com/Justin-SJ-Hong/mechurri](https://github.com/vsuminv/mechuli)  
+🔗 [https://github.com/vsuminv/mechuli](https://github.com/vsuminv/mechuli)  
 
 ---
 
@@ -88,7 +88,7 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 - 클라이언트 결제 승인 구조 설계 → 승인 시간 30% 단축  
 - 비후원자 게시글 작성 차단 → 커뮤니티 신뢰성 확보
 
-🔗 [https://github.com/Justin-SJ-Hong/wadiz-clone](https://github.com/TeamPLPL/frontend) (FE) 
+🔗 [https://github.com/TeamPLPL/frontend](https://github.com/TeamPLPL/frontend) (FE) 
 <br />
 🔗 [https://github.com/TeamPLPL/backend](https://github.com/TeamPLPL/backend) (BE)
 
