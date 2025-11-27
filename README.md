@@ -30,7 +30,8 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 ## 🧰 Tech Stack
 
 ### Frontend
-<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white"> 
+<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white">
+<img src="https://img.shields.io/badge/Vue.js-4FC08D?logo=Vue.js&logoColor=white"/>
 <img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black">
 <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white">
