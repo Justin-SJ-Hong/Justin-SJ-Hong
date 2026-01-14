@@ -110,6 +110,9 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
   <img height="160px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=compact&theme=tokyonight&hide=python,Visual%20Basic%206.0"/>
 </p>
 
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/username/github-stats/master/generated/overview.svg#gh-light-mode-only)
+
 ---
 
 ## 📬 Contact
