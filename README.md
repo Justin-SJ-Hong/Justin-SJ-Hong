@@ -29,27 +29,50 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 
 ## 🧰 Tech Stack
 
+### 🤖 Artificial Intelligence and Bots
+![ChatGPT](https://img.shields.io/badge/ChatGPT-74aa9c?logo=openai&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude-D97757?logo=claude&logoColor=white)
+
 ### Frontend
-<img src="https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white">
-<img src="https://img.shields.io/badge/Vue.js-4FC08D?logo=Vue.js&logoColor=white"/>
-<img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white">
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white">
-<img src="https://img.shields.io/badge/SASS-CC6699?logo=sass&logoColor=white">
+![Next JS](https://img.shields.io/badge/Next-black?logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=white)
+![Vue](https://img.shields.io/badge/Vue.js-4FC08D?logo=vuedotjs&logoColor=white)
+![Typescript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?logo=jquery&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?logo=tailwind-css&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-CC6699?logo=sass&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?logo=bootstrap&logoColor=white)
+![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?logo=chakraui&logoColor=white)
 
 ### State & Data
-<img src="https://img.shields.io/badge/Zustand-433E3F?logo=react&logoColor=white">
-<img src="https://img.shields.io/badge/TanStack_Query-FF4154?logo=react-query&logoColor=white">
-<img src="https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white">
 
-### Backend (Experience)
-<img src="https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white">
-<img src="https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white">
+![Zustand](https://img.shields.io/badge/Zustand-433E3F?logo=react&logoColor=white)
+![TanStack_Query](https://img.shields.io/badge/TanStack_Query-FF4154?logo=react-query&logoColor=white)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?logo=axios&logoColor=white)
 
-### Tools & Infra
-<img src="https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white">
-<img src="https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white">
-<img src="https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white">
+### Backend & Database (Experience)
+![Thymeleaf](https://img.shields.io/badge/Thymeleaf-%23005C0F.svg?logo=Thymeleaf&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?logo=spring&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white)
+![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?logo=postgresql&logoColor=white)
+![MariaDB](https://img.shields.io/badge/MariaDB-003545?logo=mariadb&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?logoColor=white)
+
+### Cowork & Infra
+![Git](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white)
+![Github](https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?logo=vercel&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)
+
+### Tools
+![Eclipse](https://img.shields.io/badge/Eclipse-FE7A16.svg?logo=Eclipse&logoColor=white)
+![JetBrains](https://img.shields.io/badge/jetbrains-%23000000.svg?logo=jetbrains&logoColor=white)
+![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?logo=visual-studio-code&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?logo=figma&logoColor=white)
 
 ---
 
