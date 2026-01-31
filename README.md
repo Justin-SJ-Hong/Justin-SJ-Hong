@@ -105,10 +105,24 @@ Git Flow 도입(충돌 50~60% 감소) 등 사용자/팀 생산성을 높이는 �
 
 ## 📈 GitHub Stats
 
-<p align="left">
-  <img height="160px" src="https://github-readme-stats.vercel.app/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight"/>
-  <img height="160px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=compact&theme=tokyonight&hide=python,Visual%20Basic%206.0"/>
-</p>
+<table>
+  <tr>
+    <td>
+      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight"/>
+    </td>
+    <td>
+      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=compact&theme=tokyonight&hide=python,Visual%20Basic%206.0"/>
+    </td>
+    <td>
+      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/streak?username=Justin-SJ-Hong&theme=tokyonight"/>
+    </td>
+  </tr>
+  <tr>
+    <td>My Stat</td>
+    <td>Top Used Languages</td>
+    <td>My Streak</td>
+  </tr>
+</table>
 
 ---
 
