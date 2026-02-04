@@ -5,7 +5,8 @@
 <p align="center">
   <a href="mailto:madwolves98@gmail.com">Email</a> •
   <a href="https://github.com/Justin-SJ-Hong">GitHub</a> •
-  <a href="https://ozex3-fe4.vercel.app">Portfolio</a>
+  <a href="https://ozex3-fe4.vercel.app">StudyHub Portfolio</a>
+  <a href="https://my-portfolio-nine-chi-20.vercel.app">My Portfolio</a>
 </p>
 
 <br/>
