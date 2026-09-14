@@ -8,6 +8,8 @@
 
 <br/>
 
+[![설명할 수 있는 Spring Boot 챌린지 1기 크루 04 우승](https://dingco.net/api/challenges/awards/99c0ae89-2c55-4202-a99c-e5ef24a1e1f6/badge.svg)](https://dingco.net/challenges/hall-of-fame#award-8d2234cd-0699-4df7-bd8e-aa680ee713b2)
+
 ---
 
 ## 🌟 About Me
