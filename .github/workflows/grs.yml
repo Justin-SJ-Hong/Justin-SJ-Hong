@@ -30,7 +30,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: "username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20"
+          options: "username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=10&hide=Hack,PLpgSQL"
           path: profile/top-langs.svg
           token: ${{ secrets.PROFILE_STATS_TOKEN }}
 
