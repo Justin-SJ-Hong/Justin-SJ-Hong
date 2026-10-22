@@ -53,7 +53,7 @@ jobs:
           curl -f -s -S "http://localhost:3000/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true" -o profile/stats.svg
 
           # Top Languages 카드 생성 (공식 원본 layout=pie 적용, Private 포함)
-          curl -f -s -S "http://localhost:3000/api/top-langs?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20" -o profile/top-langs.svg
+          curl -f -s -S "http://localhost:3000/api/top-langs?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20&hide=hack,plpgsql" -o profile/top-langs.svg
 
           # 5. 임시 서버 종료
           kill $SERVER_PID || true
