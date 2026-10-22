@@ -1,0 +1,42 @@
+name: Generate GitHub Readme Stats
+
+on:
+  schedule:
+    # 매일 자정(KST 기준 오전 9시)에 자동 갱신
+    - cron: "0 0 * * *"
+  workflow_dispatch: # GitHub 웹 Actions 탭에서 수동 실행 가능
+
+jobs:
+  generate-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 1. My Stat 카드 생성 (Private 레포 포함)
+      - name: Generate Main Stats Card
+        uses: soulteary/github-readme-stats-action@v1
+        with:
+          card: stats
+          options: "username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true"
+          path: profile/stats.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      # 2. Top Languages 카드 생성 (Private 레포, 제외 레포, pie 레이아웃 적용)
+      - name: Generate Top Languages Card
+        uses: soulteary/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: "username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20"
+          path: profile/top-langs.svg
+          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+
+      # 3. 생성된 SVG 파일 자동 커밋 및 푸시
+      - name: Commit & Push generated cards
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update github readme stats cards"
+          file_pattern: "profile/*.svg"
