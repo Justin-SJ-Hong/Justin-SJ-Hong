@@ -21,12 +21,12 @@ jobs:
         with:
           node-version: 20
 
-      # ⚡ npm 글로벌 캐시 디렉터리 캐싱 (매 실행 시 다운로드 속도 대폭 단축)
+      # ⚡ npm 캐시 (다운로드 시간 단축)
       - name: Cache npm dependencies
         uses: actions/cache@v4
         with:
           path: ~/.npm
-          key: ${{ runner.os }}-grs-npm-${{ hashFiles('/tmp/grs/package.json') }}
+          key: ${{ runner.os }}-grs-npm-v1
           restore-keys: |
             ${{ runner.os }}-grs-npm-
 
@@ -34,20 +34,19 @@ jobs:
         env:
           PAT_1: ${{ secrets.PROFILE_STATS_TOKEN }}
         run: |
-          # 1. 임시 디렉토리에 공식 anuraghazra 레포 클론 및 의존성 설치
+          echo "1. 공식 anuraghazra 레포 클론 및 의존성 설치"
           git clone --depth 1 https://github.com/anuraghazra/github-readme-stats.git /tmp/grs
           cd /tmp/grs
 
-          # 캐시된 npm을 활용하여 설치 (--prefer-offline으로 캐시 우선 사용)
           npm install --prefer-offline
           npm install express --prefer-offline
 
-          # 2. 로컬 Express 서버 백그라운드 구동 (공식 지원 모드)
-          PORT=3000 node express.js &
-          SERVER_PID=$!
+          echo "2. 백그라운드 Express 서버 완전 분리 구동"
+          # stdout/stderr 스트림을 파일로 리다이렉트하여 Actions 러너 멈춤 현상 차단
+          PORT=3000 nohup node express.js > /tmp/server.log 2>&1 < /dev/null &
+          disown
 
-          # 3. 로컬 서버 준비 대기 (최대 30초)
-          echo "Waiting for official GRS server to start..."
+          echo "3. 서버 기동 상태 확인 중..."
           for i in {1..30}; do
             if curl -s http://localhost:3000/api > /dev/null 2>&1; then
               echo "Server is ready!"
@@ -56,18 +55,18 @@ jobs:
             sleep 1
           done
 
-          # 4. 프로필 저장소 루트로 돌아와 SVG 파일 추출
+          echo "4. SVG 카드 생성 및 다운로드"
           cd "$GITHUB_WORKSPACE"
           mkdir -p profile
 
-          # My Stat 카드 생성 (Private 포함)
-          curl -f -s -S "http://localhost:3000/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true" -o profile/stats.svg
+          # My Stat 카드 생성
+          curl -f -s -S --max-time 60 "http://localhost:3000/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true" -o profile/stats.svg
 
-          # Top Languages 카드 생성 (공식 원본 layout=pie 적용, Private 포함, 불필요한 언어 숨김)
-          curl -f -s -S "http://localhost:3000/api/top-langs?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20&hide=hack,plpgsql" -o profile/top-langs.svg
+          # Top Languages 카드 생성 (공식 layout=pie)
+          curl -f -s -S --max-time 60 "http://localhost:3000/api/top-langs?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20&hide=hack,plpgsql" -o profile/top-langs.svg
 
-          # 5. 임시 서버 종료
-          kill $SERVER_PID || true
+          echo "5. 로컬 서버 완전 종료"
+          pkill -9 -f "node express.js" || true
 
       # 6. 생성된 카드 자동 커밋 및 푸시
       - name: Commit & Push generated cards
