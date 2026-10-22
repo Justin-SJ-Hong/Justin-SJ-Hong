@@ -79,7 +79,7 @@
       <img height="160px" src="https://github-readme-stats-fast.vercel.app/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight"/>
     </td>
     <td>
-      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=compact&theme=tokyonight&hide=python,Visual%20Basic%206.0"/>
+      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=compact&theme=tokyonight"/>
     </td>
     <td>
       <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/streak?username=Justin-SJ-Hong&theme=tokyonight"/>
