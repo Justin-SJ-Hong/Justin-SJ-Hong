@@ -81,7 +81,7 @@
     </td>
     <td>
       <!-- <img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20"/> -->
-      <img width="100%" src="profile/top-langs.svg"/>
+      <img width="100%" height="100%" src="profile/top-langs.svg"/>
     </td>
     <td>
       <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/streak?username=Justin-SJ-Hong&theme=tokyonight"/>
