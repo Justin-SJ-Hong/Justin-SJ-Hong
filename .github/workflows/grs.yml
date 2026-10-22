@@ -1,10 +1,10 @@
-name: Generate GitHub Readme Stats
+name: Generate GitHub Readme Stats (Official)
 
 on:
   schedule:
     # 매일 자정(KST 기준 오전 9시)에 자동 갱신
     - cron: "0 0 * * *"
-  workflow_dispatch: # GitHub 웹 Actions 탭에서 수동 실행 가능
+  workflow_dispatch: # Actions 탭에서 수동 실행 가능
 
 jobs:
   generate-stats:
@@ -16,27 +16,51 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 1. My Stat 카드 생성 (Private 레포 포함)
-      - name: Generate Main Stats Card
-        uses: soulteary/github-readme-stats-action@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          card: stats
-          options: "username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true"
-          path: profile/stats.svg
-          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+          node-version: 20
 
-      # 2. Top Languages 카드 생성 (Private 레포, 제외 레포, pie 레이아웃 적용)
-      - name: Generate Top Languages Card
-        uses: soulteary/github-readme-stats-action@v1
-        with:
-          card: top-langs
-          options: "username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=10&hide=Hack,PLpgSQL,Visual%20Basic%206.0"
-          path: profile/top-langs.svg
-          token: ${{ secrets.PROFILE_STATS_TOKEN }}
+      - name: Run Official GRS Server and Generate SVGs
+        env:
+          PAT_1: ${{ secrets.PROFILE_STATS_TOKEN }}
+        run: |
+          # 1. 임시 디렉토리에 공식 anuraghazra 레포 클론 및 의존성 설치
+          git clone --depth 1 https://github.com/anuraghazra/github-readme-stats.git /tmp/grs
+          cd /tmp/grs
+          npm install
+          npm install express
 
-      # 3. 생성된 SVG 파일 자동 커밋 및 푸시
+          # 2. 로컬 Express 서버 백그라운드 구동 (공식 지원 모드)
+          PORT=3000 node express.js &
+          SERVER_PID=$!
+
+          # 3. 로컬 서버 준비 대기 (최대 30초)
+          echo "Waiting for official GRS server to start..."
+          for i in {1..30}; do
+            if curl -s http://localhost:3000/api > /dev/null 2>&1; then
+              echo "Server is ready!"
+              break
+            fi
+            sleep 1
+          done
+
+          # 4. 프로필 저장소 루트로 돌아와 SVG 파일 추출
+          cd "$GITHUB_WORKSPACE"
+          mkdir -p profile
+
+          # My Stat 카드 생성 (Private 포함)
+          curl -f -s -S "http://localhost:3000/api?username=Justin-SJ-Hong&show_icons=true&theme=tokyonight&count_private=true" -o profile/stats.svg
+
+          # Top Languages 카드 생성 (공식 원본 layout=pie 적용, Private 포함)
+          curl -f -s -S "http://localhost:3000/api/top-langs?username=Justin-SJ-Hong&layout=pie&theme=tokyonight&exclude_repo=sparta,devops&include_all_commits=true&count_private=true&langs_count=20" -o profile/top-langs.svg
+
+          # 5. 임시 서버 종료
+          kill $SERVER_PID || true
+
+      # 6. 생성된 카드 자동 커밋 및 푸시
       - name: Commit & Push generated cards
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: update github readme stats cards"
+          commit_message: "chore: update official readme stats cards"
           file_pattern: "profile/*.svg"
