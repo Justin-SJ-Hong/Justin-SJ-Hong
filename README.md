@@ -84,7 +84,7 @@
       <img width="100%" height="100%" src="profile/top-langs.svg"/>
     </td>
     <td>
-      <img height="160px" src="https://github-readme-stats-fast.vercel.app/api/streak?username=Justin-SJ-Hong&theme=tokyonight"/>
+      <img height="160px" src="https://streak-stats.demolab.com/?user=Justin-SJ-Hong&theme=tokyonight"/>
     </td>
   </tr>
   <tr>
